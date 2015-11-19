@@ -8,32 +8,37 @@
 
 import UIKit
 
-class ResponseViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-     var items: [String] = ["Response1", "Response2", "Response3"]
-    @IBOutlet weak var tableView: UITableView!
+class ResponseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    //var tableView: UITableView  =   UITableView()
+    var items: [String] = ["We", "Heart", "Swift"]
+    
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //tableView.frame         =   CGRectMake(0, 50, 320, 200)
+         //tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+         //self.view.addSubview(tableView)
+        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
+        return self.items.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        
+        cell.textLabel?.text = self.items[indexPath.row]
+        
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        println("You selected cell #\(indexPath.row)!")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
