@@ -9,15 +9,16 @@
 import UIKit
 
 class ResponseViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-
+     var items: [String] = ["Response1", "Response2", "Response3"]
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.items.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
