@@ -8,10 +8,34 @@
 
 import UIKit
 
-class DailyViewController: UIViewController {
-
+class DailyViewController: UIViewController, UIScrollViewDelegate {
+    @IBOutlet var questionScrollView: UIScrollView!
+    @IBOutlet var pageControl: UIPageControl!
+    var jarImages: [UIImage] = []
+    var pageViews: [UIImageView?] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        jarImages = [UIImage(named: "JarWhite.png")!,
+            UIImage(named: "JarWhite.png")!]
+        
+        let pageCount = jarImages.count
+        
+        pageControl.currentPage = 0
+        pageControl.numberOfPages = pageCount
+        
+        for _ in 0..<pageCount {
+            pageViews.append(nil)
+        }
+        
+        let pagesScrollViewSize = questionScrollView.frame.size
+        questionScrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(jarImages.count),
+            height: pagesScrollViewSize.height)
+        loadVisiblePages()
+        setupGestureRecognizer()
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -20,8 +44,100 @@ class DailyViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func setupGestureRecognizer() {
+        let doubleTap = UITapGestureRecognizer(target: self, action: "handleDoubleTap:")
+        doubleTap.numberOfTapsRequired = 1
+        questionScrollView.addGestureRecognizer(doubleTap)
+    }
     
+    func handleDoubleTap(recognizer: UITapGestureRecognizer){
+        presentViewController(ResponseViewController(), animated: true, completion: nil)
+    }
 
+    
+    func loadPage(page: Int) {
+        if page < 0 || page >= jarImages.count {
+            // If it's outside the range of what you have to display, then do nothing
+            return
+        }
+        
+        // 1
+        if let pageView = pageViews[page] {
+            // he view is already loaded.
+            
+        } else {
+            // 2
+            var frame = questionScrollView.bounds
+            frame.origin.x = frame.size.width * CGFloat(page)
+            frame.origin.y = 0.0
+            
+            // 3
+            let newPageView = UIImageView(image: jarImages[page])
+            newPageView.contentMode = .ScaleAspectFit
+            newPageView.frame = frame
+            questionScrollView.addSubview(newPageView)
+            
+            // 4
+            pageViews[page] = newPageView
+            
+        }
+    }
+    
+    
+    func purgePage(page: Int) {
+        if page < 0 || page >= jarImages.count {
+            // If it's outside the range of what you have to display, then do nothing
+            return
+        }
+        
+        // Remove a page from the scroll view and reset the container array
+        if let pageView = pageViews[page] {
+            pageView.removeFromSuperview()
+            pageViews[page] = nil
+        }
+    }
+    
+    
+    func loadVisiblePages() {
+        // First, determine which page is currently visible
+        let pageWidth = questionScrollView.frame.size.width
+        let page = Int(floor((questionScrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
+        
+        // Update the page control
+        pageControl.currentPage = page
+        
+        // Work out which pages you want to load
+        let firstPage = page - 1
+        let lastPage = page + 1
+        
+        // Purge anything before the first page
+        for var index = 0; index < firstPage; ++index {
+            purgePage(index)
+        }
+        
+        // Load pages in our range
+        for index in firstPage...lastPage {
+            loadPage(index)
+        }
+        
+        // Purge anything after the last page
+        for var index = lastPage+1; index < jarImages.count; ++index {
+            purgePage(index)
+        }
+    }
+
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        // Load the pages that are now on screen
+        loadVisiblePages()
+    }
+    
+   
+    
+    func tapDetected() {
+        println("Single Tap on imageview")
+    }
+      
     /*
     // MARK: - Navigation
 

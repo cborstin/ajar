@@ -13,6 +13,9 @@
 		F93CD7FE1BF718D7006A5C3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93CD7FD1BF718D7006A5C3A /* Images.xcassets */; };
 		F93CD8011BF718D7006A5C3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93CD7FF1BF718D7006A5C3A /* LaunchScreen.xib */; };
 		F93CD80D1BF718D8006A5C3A /* AjarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93CD80C1BF718D8006A5C3A /* AjarTests.swift */; };
+		F9FDA01A1BFD5E0200A4F6D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */; };
+		F9FDA01C1BFD6F5400A4F6D5 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */; };
+		F9FDA01E1BFD907300A4F6D5 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA01D1BFD907300A4F6D5 /* ResponseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		F93CD8061BF718D8006A5C3A /* AjarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AjarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93CD80B1BF718D8006A5C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93CD80C1BF718D8006A5C3A /* AjarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjarTests.swift; sourceTree = "<group>"; };
+		F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		F9FDA01D1BFD907300A4F6D5 /* ResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +86,10 @@
 				F93CD7F61BF718D7006A5C3A /* AppDelegate.swift */,
 				F93CD7F81BF718D7006A5C3A /* ViewController.swift */,
 				F93CD7FA1BF718D7006A5C3A /* Main.storyboard */,
+				F9FDA01D1BFD907300A4F6D5 /* ResponseViewController.swift */,
+				F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */,
 				F93CD7FD1BF718D7006A5C3A /* Images.xcassets */,
+				F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */,
 				F93CD7FF1BF718D7006A5C3A /* LaunchScreen.xib */,
 				F93CD7F41BF718D7006A5C3A /* Supporting Files */,
 			);
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9FDA01A1BFD5E0200A4F6D5 /* LoginViewController.swift in Sources */,
 				F93CD7F91BF718D7006A5C3A /* ViewController.swift in Sources */,
+				F9FDA01C1BFD6F5400A4F6D5 /* DailyViewController.swift in Sources */,
 				F93CD7F71BF718D7006A5C3A /* AppDelegate.swift in Sources */,
+				F9FDA01E1BFD907300A4F6D5 /* ResponseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +421,7 @@
 				F93CD8121BF718D8006A5C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F93CD8131BF718D8006A5C3A /* Build configuration list for PBXNativeTarget "AjarTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +430,7 @@
 				F93CD8151BF718D8006A5C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
