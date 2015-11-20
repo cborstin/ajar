@@ -15,7 +15,14 @@
 		F93CD80D1BF718D8006A5C3A /* AjarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93CD80C1BF718D8006A5C3A /* AjarTests.swift */; };
 		F9FDA01A1BFD5E0200A4F6D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */; };
 		F9FDA01C1BFD6F5400A4F6D5 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */; };
-		F9FDA01E1BFD907300A4F6D5 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA01D1BFD907300A4F6D5 /* ResponseViewController.swift */; };
+		F9FDA0201BFDC41000A4F6D5 /* ResponseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA01F1BFDC41000A4F6D5 /* ResponseTableViewController.swift */; };
+		F9FDA0221BFDC99C00A4F6D5 /* NoteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA0211BFDC99B00A4F6D5 /* NoteViewCell.swift */; };
+		F9FDA0261BFE655000A4F6D5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA0251BFE655000A4F6D5 /* Data.swift */; };
+		F9FDA0281BFE89EC00A4F6D5 /* ResponseTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FDA0271BFE89EC00A4F6D5 /* ResponseTableCell.xib */; };
+		F9FDA02A1BFE8B7900A4F6D5 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA0291BFE8B7900A4F6D5 /* AnswerCell.swift */; };
+		F9FDA02C1BFE8F9400A4F6D5 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA02B1BFE8F9400A4F6D5 /* AnswerViewController.swift */; };
+		F9FDA02E1BFE97BC00A4F6D5 /* viewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FDA02D1BFE97BC00A4F6D5 /* viewTableCell.xib */; };
+		F9FDA0301BFE98A700A4F6D5 /* TblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA02F1BFE98A600A4F6D5 /* TblCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +48,14 @@
 		F93CD80C1BF718D8006A5C3A /* AjarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjarTests.swift; sourceTree = "<group>"; };
 		F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
-		F9FDA01D1BFD907300A4F6D5 /* ResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
+		F9FDA01F1BFDC41000A4F6D5 /* ResponseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseTableViewController.swift; sourceTree = "<group>"; };
+		F9FDA0211BFDC99B00A4F6D5 /* NoteViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewCell.swift; sourceTree = "<group>"; };
+		F9FDA0251BFE655000A4F6D5 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = ../Data.swift; sourceTree = "<group>"; };
+		F9FDA0271BFE89EC00A4F6D5 /* ResponseTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResponseTableCell.xib; sourceTree = "<group>"; };
+		F9FDA0291BFE8B7900A4F6D5 /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		F9FDA02B1BFE8F9400A4F6D5 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		F9FDA02D1BFE97BC00A4F6D5 /* viewTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = viewTableCell.xib; sourceTree = "<group>"; };
+		F9FDA02F1BFE98A600A4F6D5 /* TblCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TblCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +98,16 @@
 			isa = PBXGroup;
 			children = (
 				F93CD7F61BF718D7006A5C3A /* AppDelegate.swift */,
+				F9FDA0251BFE655000A4F6D5 /* Data.swift */,
 				F93CD7F81BF718D7006A5C3A /* ViewController.swift */,
 				F93CD7FA1BF718D7006A5C3A /* Main.storyboard */,
-				F9FDA01D1BFD907300A4F6D5 /* ResponseViewController.swift */,
+				F9FDA02B1BFE8F9400A4F6D5 /* AnswerViewController.swift */,
+				F9FDA02D1BFE97BC00A4F6D5 /* viewTableCell.xib */,
+				F9FDA02F1BFE98A600A4F6D5 /* TblCell.swift */,
+				F9FDA0211BFDC99B00A4F6D5 /* NoteViewCell.swift */,
+				F9FDA01F1BFDC41000A4F6D5 /* ResponseTableViewController.swift */,
+				F9FDA0271BFE89EC00A4F6D5 /* ResponseTableCell.xib */,
+				F9FDA0291BFE8B7900A4F6D5 /* AnswerCell.swift */,
 				F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */,
 				F93CD7FD1BF718D7006A5C3A /* Images.xcassets */,
 				F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */,
@@ -202,8 +223,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93CD7FC1BF718D7006A5C3A /* Main.storyboard in Resources */,
+				F9FDA0281BFE89EC00A4F6D5 /* ResponseTableCell.xib in Resources */,
 				F93CD8011BF718D7006A5C3A /* LaunchScreen.xib in Resources */,
 				F93CD7FE1BF718D7006A5C3A /* Images.xcassets in Resources */,
+				F9FDA02E1BFE97BC00A4F6D5 /* viewTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +247,13 @@
 				F9FDA01A1BFD5E0200A4F6D5 /* LoginViewController.swift in Sources */,
 				F93CD7F91BF718D7006A5C3A /* ViewController.swift in Sources */,
 				F9FDA01C1BFD6F5400A4F6D5 /* DailyViewController.swift in Sources */,
+				F9FDA02C1BFE8F9400A4F6D5 /* AnswerViewController.swift in Sources */,
+				F9FDA02A1BFE8B7900A4F6D5 /* AnswerCell.swift in Sources */,
 				F93CD7F71BF718D7006A5C3A /* AppDelegate.swift in Sources */,
-				F9FDA01E1BFD907300A4F6D5 /* ResponseViewController.swift in Sources */,
+				F9FDA0201BFDC41000A4F6D5 /* ResponseTableViewController.swift in Sources */,
+				F9FDA0221BFDC99C00A4F6D5 /* NoteViewCell.swift in Sources */,
+				F9FDA0301BFE98A700A4F6D5 /* TblCell.swift in Sources */,
+				F9FDA0261BFE655000A4F6D5 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

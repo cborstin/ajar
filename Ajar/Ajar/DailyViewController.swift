@@ -51,7 +51,7 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func handleDoubleTap(recognizer: UITapGestureRecognizer){
-        presentViewController(ResponseViewController(), animated: true, completion: nil)
+        performSegueWithIdentifier("DailySegue", sender: nil)
     }
 
     

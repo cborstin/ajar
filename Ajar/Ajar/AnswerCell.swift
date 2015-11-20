@@ -1,5 +1,5 @@
 //
-//  NoteViewCell.swift
+//  AnswerCell.swift
 //  Ajar
 //
 //  Created by Catherine Borsting on 11/19/15.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class NoteViewCell: UITableViewCell {
+class AnswerCell: UITableViewCell {
 
-    @IBOutlet var BackgroundNote: UIImageView!
-    @IBOutlet var ResponseText: UILabel!
+    @IBOutlet var response: UILabel!
+    @IBOutlet var backgroundImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,11 +21,6 @@ class NoteViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    func setCell(backgroundNote: UIImage, text: String){
-        self.BackgroundNote.image = backgroundNote
-        self.ResponseText.text = text
-        
     }
 
 }
