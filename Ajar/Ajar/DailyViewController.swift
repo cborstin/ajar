@@ -18,7 +18,7 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
         
         
         jarImages = [UIImage(named: "JarWhiteDay1.png")!,
-            UIImage(named: "JarWhiteDay1.png")!]
+            UIImage(named: "JarWhiteDay2.png")!]
         
         let pageCount = jarImages.count
         

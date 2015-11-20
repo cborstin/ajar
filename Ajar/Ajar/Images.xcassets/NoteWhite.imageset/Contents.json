@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "note_white_fill.png"
+      "filename" : "NoteWhite.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
