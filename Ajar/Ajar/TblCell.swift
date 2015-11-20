@@ -10,6 +10,7 @@ import UIKit
 
 class TblCell: UITableViewCell {
 
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var imgIcon: UIImageView!
     @IBOutlet var lblResponse: UILabel!
     @IBOutlet var imgBackground: UIImageView!

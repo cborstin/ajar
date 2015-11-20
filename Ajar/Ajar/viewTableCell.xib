@@ -7,33 +7,46 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="X1L-YU-YKx" customClass="TblCell" customModule="Ajar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="325" height="118"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="201" id="X1L-YU-YKx" customClass="TblCell" customModule="Ajar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="201"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X1L-YU-YKx" id="vvE-4d-fT6">
-                <rect key="frame" x="0.0" y="0.0" width="325" height="117.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="325" height="200.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NoteWhite" translatesAutoresizingMaskIntoConstraints="NO" id="h3c-TP-g1K">
-                        <rect key="frame" x="3" y="0.0" width="318" height="117"/>
+                        <rect key="frame" x="3" y="0.0" width="322" height="200.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHT-Xm-68W">
-                        <rect key="frame" x="10" y="40" width="304" height="69"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <rect key="frame" x="20" y="56" width="287" height="107"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-0A-mOg">
-                        <rect key="frame" x="10" y="8" width="70" height="32"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-0A-mOg">
+                        <rect key="frame" x="20" y="16" width="30" height="26"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYD-qb-IqJ">
+                        <rect key="frame" x="59" y="18" width="209" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-Comments-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnz-v1-oJc">
+                        <rect key="frame" x="112" y="171" width="100" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgBackground" destination="Ah0-0A-mOg" id="aJm-ba-0WU"/>
                 <outlet property="imgIcon" destination="Ah0-0A-mOg" id="mZE-f6-3Pz"/>
                 <outlet property="lblResponse" destination="AHT-Xm-68W" id="uaJ-av-MUB"/>
+                <outlet property="nameLabel" destination="bYD-qb-IqJ" id="l7x-35-fvc"/>
             </connections>
-            <point key="canvasLocation" x="347.5" y="228"/>
+            <point key="canvasLocation" x="347.5" y="269.5"/>
         </tableViewCell>
     </objects>
     <resources>

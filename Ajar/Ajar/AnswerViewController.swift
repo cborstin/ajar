@@ -14,6 +14,8 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var tableView: UITableView!
     var index: Int!
     var data: [String] = ["Hello", "Its Me", "I was wondering when you'd like to meet"]
+    var users: [String] = ["Cat", "Cindy", "Karen"]
+    var icons: [String] = ["tiger", "dog", "elephant"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,16 +23,16 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         if(index == 0){
             questionLabel.text = "What are you grateful for today?"
-            data = ["Hello", "Its Me", "I was wondering when you'd like to meet"]
+            data = ["I am thankful that Sara took her first unassisted step today. :)", "I am grateful for the sun and access to coffee and Brian's first word!", "Charlotte made her first friend at preschool!"]
         }
         else{
             questionLabel.text = "What memory would you keep from today?"
-            data = ["Words", "More words", "Insert all the words here"]
+            data = ["Sara tasted dark chocolate for the first time today. I didn't know her face could pucker up that much.", "Brian ran up and down the beach today. So young, so spry.", "Charlotte chased birds at the park and cried because she laughed so hard. :)"]
         }
         
         var nib = UINib(nibName: "viewTableCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
-        tableView.rowHeight = 140
+        tableView.rowHeight = 220
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Bulb")!)
         self.tableView.backgroundView = nil
         self.tableView.backgroundColor = UIColor.clearColor()
@@ -50,6 +52,8 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //cell.textLabel?.text = self.data[indexPath.row]
         var cell:TblCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! TblCell
         cell.lblResponse.text = data[indexPath.row]
+        cell.imgIcon.image = UIImage(named: icons[indexPath.row])
+        cell.nameLabel.text = users[indexPath.row]
         return cell
     }
     
