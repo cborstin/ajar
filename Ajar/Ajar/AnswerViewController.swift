@@ -19,10 +19,17 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         var nib = UINib(nibName: "viewTableCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
+        tableView.rowHeight = 140
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Bulb"))
+        self.tableView.separatorColor = UIColor.clearColor()
     }
+    
+
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.data.count
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //var cell: UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
         //cell.textLabel?.text = self.data[indexPath.row]
@@ -30,9 +37,11 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.lblResponse.text = data[indexPath.row]
         return cell
     }
+    
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         println("Yo")
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
