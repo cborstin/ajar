@@ -17,10 +17,14 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         LoginButton.layer.cornerRadius = 4
-        BackgroundLabel.layer.cornerRadius = 4
-        BackgroundLabel.layer.borderWidth = 1
         LoginButton.layer.borderWidth = 1
         LoginButton.layer.borderColor = self.view.tintColor.CGColor
+        BackgroundLabel.layer.cornerRadius = 4
+        BackgroundLabel.layer.borderWidth = 4
+        BackgroundLabel.layer.borderColor = UIColor.whiteColor().CGColor
+        BackgroundLabel.layer.shadowOffset = CGSize(width: 1, height: 1)
+        BackgroundLabel.layer.shadowOpacity = 0.5
+        BackgroundLabel.layer.shadowRadius = 2
 
     }
     

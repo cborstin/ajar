@@ -10,18 +10,33 @@ import UIKit
 
 class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var questionLabel: UILabel!
     @IBOutlet var tableView: UITableView!
+    var index: Int!
     var data: [String] = ["Hello", "Its Me", "I was wondering when you'd like to meet"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        if(index == 0){
+            questionLabel.text = "What are You Grateful For Today?"
+            data = ["Hello", "Its Me", "I was wondering when you'd like to meet"]
+        }
+        else{
+            questionLabel.text = "What Did You Struggle With Today?"
+            data = ["Words", "More words", "Insert all the words here"]
+        }
+        
         var nib = UINib(nibName: "viewTableCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 140
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Bulb"))
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Bulb")!)
+        self.tableView.backgroundView = nil
+        self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.separatorColor = UIColor.clearColor()
+        
+        
     }
     
 

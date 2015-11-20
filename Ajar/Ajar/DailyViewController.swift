@@ -33,7 +33,7 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
         questionScrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(jarImages.count),
             height: pagesScrollViewSize.height)
         loadVisiblePages()
-        setupGestureRecognizer()
+        //setupGestureRecognizer()
         
         
 
@@ -51,7 +51,17 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func handleDoubleTap(recognizer: UITapGestureRecognizer){
-        performSegueWithIdentifier("DailySegue", sender: nil)
+        if let image = recognizer.view as? UIImageView{
+            performSegueWithIdentifier("DailySegue", sender: image.tag)
+        }
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DailySegue" {
+            if let answerViewController = segue.destinationViewController as? AnswerViewController {
+                answerViewController.index = sender as? Int
+            }
+        }
     }
 
     
@@ -73,8 +83,14 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
             
             // 3
             let newPageView = UIImageView(image: jarImages[page])
+            let doubleTap = UITapGestureRecognizer(target: self, action: "handleDoubleTap:")
+            doubleTap.numberOfTapsRequired = 1
+            newPageView.userInteractionEnabled = true
+            newPageView.tag = page
+            newPageView.addGestureRecognizer(doubleTap)
             newPageView.contentMode = .ScaleAspectFit
             newPageView.frame = frame
+            
             questionScrollView.addSubview(newPageView)
             
             // 4
