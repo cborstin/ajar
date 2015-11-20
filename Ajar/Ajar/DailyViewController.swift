@@ -17,8 +17,8 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         
-        jarImages = [UIImage(named: "JarWhite.png")!,
-            UIImage(named: "JarWhite.png")!]
+        jarImages = [UIImage(named: "JarWhiteDay1.png")!,
+            UIImage(named: "JarWhiteDay1.png")!]
         
         let pageCount = jarImages.count
         
@@ -151,7 +151,7 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
    
     
     func tapDetected() {
-        println("Single Tap on imageview")
+        print("Single Tap on imageview")
     }
       
     /*

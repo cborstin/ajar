@@ -54,7 +54,7 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Yo")
+        print("Yo")
     }
     
     override func didReceiveMemoryWarning() {

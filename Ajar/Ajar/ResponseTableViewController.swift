@@ -50,8 +50,8 @@ class ResponseTableViewController: UITableViewController {
         let entry = data.places[indexPath.row]
         
         let image = UIImage(named: entry.filename)
-        println("PRINT STATEMENT HERE ")
-        println("PRINT STATEMENT HERE ")
+        print("PRINT STATEMENT HERE ")
+        print("PRINT STATEMENT HERE ")
         cell.setCell(image!, text: entry.heading)
         print(cell)
         return cell
