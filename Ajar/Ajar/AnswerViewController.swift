@@ -40,6 +40,9 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
     }
+    override func viewDidAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
     
 
     
@@ -64,6 +67,21 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+        
+    }
+    override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+        if let id = identifier{
+            if id == "idAddAnswerUwindSegue" {
+                let unwindSegue = AddAnswerUnwindSegue(identifier: id, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+                    
+                })
+                return unwindSegue
+            }
+        }
+        
+        return super.segueForUnwindingToViewController(toViewController, fromViewController: fromViewController, identifier: identifier)!
     }
     
 
