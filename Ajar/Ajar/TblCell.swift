@@ -10,6 +10,7 @@ import UIKit
 
 class TblCell: UITableViewCell {
 
+    @IBOutlet var btnComments: UIButton!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var imgIcon: UIImageView!
     @IBOutlet var lblResponse: UILabel!
@@ -18,8 +19,9 @@ class TblCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.backgroundColor = UIColor.clearColor()
+        
     }
-
+   
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

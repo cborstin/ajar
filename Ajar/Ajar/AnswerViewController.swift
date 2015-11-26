@@ -57,8 +57,23 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.lblResponse.text = data[indexPath.row]
         cell.imgIcon.image = UIImage(named: icons[indexPath.row])
         cell.nameLabel.text = users[indexPath.row]
+        cell.btnComments.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
         return cell
     }
+    
+    func pressed(sender: UIButton!) {
+        performSegueWithIdentifier("viewCommentsSegue", sender: nil)
+        print("Yo")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ViewCommentsSegue" {
+            if let commentViewController = segue.destinationViewController as? CommentViewController {
+                
+            }
+        }
+    }
+    
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         print("Yo")
