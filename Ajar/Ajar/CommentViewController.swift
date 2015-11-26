@@ -10,10 +10,12 @@ import UIKit
 
 class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var addCommentText: UITextField!
+    @IBOutlet var btnPost: UIButton!
     @IBOutlet var tableView: UITableView!
-    var comments:[String] = ["Hahah this is cute", "Omg wow", "This is so funny"]
     var users:[String] = ["Cindy", "Cat", "Karen"]
     var icons: [String] = ["tiger", "dog", "elephant"]
+    var response:Data!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,25 +24,48 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         var nib2 = UINib(nibName: "commentTblCell", bundle: nil)
         tableView.registerNib(nib2, forCellReuseIdentifier: "commentCell")
-        tableView.rowHeight = 80
+        tableView.rowHeight = 100
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Bulb")!)
+        self.tableView.backgroundView = nil
+        self.tableView.backgroundColor = UIColor.clearColor()
+        self.tableView.separatorColor = UIColor.clearColor()
+        btnPost.addTarget(self, action: "postPressed:", forControlEvents: .TouchUpInside)
+    }
+    func postPressed(sender: AnyObject?) {
+        //Data: (fname : String, resp : String, name: String, comment: [(String, String, String)], img: String)
+        let userInput = addCommentText.text
+        response.comments.append(("Amy", "elephant", userInput!))
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.comments.count
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
     }
-    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return response.comments.count
+    }
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var cell:TblCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! TblCell
+        cell.lblResponse.text = response.response
+        cell.imgIcon.image = UIImage(named: response.icon)
+        cell.nameLabel.text = response.username
+        cell.btnComments.setTitle("", forState: .Normal)
+        cell.btnComments.setTitle("", forState: .Selected)
+        return cell
+    }
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 205
+    }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:commentTableCell = self.tableView.dequeueReusableCellWithIdentifier("commentCell") as! commentTableCell
-        //cell.lblComment.text = comments[indexPath.row]
-        cell.imgIcon.image = UIImage(named: icons[indexPath.row])
-        //cell.nameLabel.text = users[indexPath.row]
-        cell.lblComment.text = comments[indexPath.row]
-        cell.lblUserName.text = users[indexPath.row]
-        
+        cell.imgIcon.image = UIImage(named: response.comments[indexPath.row].1)
+        cell.lblComment.text = response.comments[indexPath.row].2
+        cell.lblUserName.text = response.comments[indexPath.row].0
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     
     }

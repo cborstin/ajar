@@ -500,7 +500,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hhf-dH-ru9">
                                 <rect key="frame" x="20" y="120" width="560" height="360"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Xtv-a2-z5i" id="CR3-4g-tya"/>
                                     <outlet property="delegate" destination="Xtv-a2-z5i" id="MzB-RD-iNq"/>
@@ -549,6 +549,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addCommentText" destination="4qI-bz-uzV" id="FTK-dV-2TW"/>
+                        <outlet property="btnPost" destination="cmk-73-CCv" id="PrN-Jv-RjL"/>
                         <outlet property="tableView" destination="Hhf-dH-ru9" id="i8u-na-sWE"/>
                     </connections>
                 </viewController>

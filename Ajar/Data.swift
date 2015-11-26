@@ -10,20 +10,20 @@ import Foundation
 
 
 class Data {
-    class Entry {
-        let filename : String
-        let heading : String
-        init(fname : String, heading : String) {
-            self.heading = heading
-            self.filename = fname
-        }
+    let filename : String
+    let username: String
+    let response : String
+    let icon: String
+    var comments: [(String, String, String)]
+    init(fname : String, resp : String, name: String, comment: [(String, String, String)], img: String) {
+        self.response = resp
+        self.filename = fname
+        self.username = name
+        self.comments = comment
+        self.icon = img
     }
-    
-    let places = [
-        Entry(fname: "NoteWhite.png", heading: "Response 1"),
-        Entry(fname: "NoteWhite.png", heading: "Response 2"),
-        Entry(fname: "NoteWhite.png", heading: "Response 3"),
-        Entry(fname: "NoteWhite.png", heading: "Response 4")
-    ]
+    func getResponse()->String{
+        return self.response
+    }
     
 }
