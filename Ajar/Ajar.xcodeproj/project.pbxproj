@@ -21,6 +21,10 @@
 		F9A938FF1C0670B9005C7977 /* ViewCommentsSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A938FE1C0670B9005C7977 /* ViewCommentsSegue.swift */; };
 		F9A939011C0670CA005C7977 /* ViewCommentsUwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A939001C0670CA005C7977 /* ViewCommentsUwindSegue.swift */; };
 		F9A939051C068675005C7977 /* commentTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9A939041C068675005C7977 /* commentTblCell.xib */; };
+		F9A9392A1C083569005C7977 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A939291C083569005C7977 /* FriendsViewController.swift */; };
+		F9A9392C1C0835E7005C7977 /* FriendTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9A9392B1C0835E7005C7977 /* FriendTblCell.xib */; };
+		F9A9392E1C083750005C7977 /* FriendTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A9392D1C083750005C7977 /* FriendTableCell.swift */; };
+		F9A939301C08385C005C7977 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A9392F1C08385C005C7977 /* Friend.swift */; };
 		F9FDA01A1BFD5E0200A4F6D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */; };
 		F9FDA01C1BFD6F5400A4F6D5 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */; };
 		F9FDA0221BFDC99C00A4F6D5 /* NoteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FDA0211BFDC99B00A4F6D5 /* NoteViewCell.swift */; };
@@ -60,6 +64,10 @@
 		F9A938FE1C0670B9005C7977 /* ViewCommentsSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCommentsSegue.swift; sourceTree = "<group>"; };
 		F9A939001C0670CA005C7977 /* ViewCommentsUwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCommentsUwindSegue.swift; sourceTree = "<group>"; };
 		F9A939041C068675005C7977 /* commentTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = commentTblCell.xib; sourceTree = "<group>"; };
+		F9A939291C083569005C7977 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		F9A9392B1C0835E7005C7977 /* FriendTblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTblCell.xib; sourceTree = "<group>"; };
+		F9A9392D1C083750005C7977 /* FriendTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableCell.swift; sourceTree = "<group>"; };
+		F9A9392F1C08385C005C7977 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		F9FDA0211BFDC99B00A4F6D5 /* NoteViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewCell.swift; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 				F9FDA0291BFE8B7900A4F6D5 /* AnswerCell.swift */,
 				F9A938FA1C05A265005C7977 /* commentTableCell.swift */,
 				F9FDA0211BFDC99B00A4F6D5 /* NoteViewCell.swift */,
+				F9A9392D1C083750005C7977 /* FriendTableCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -166,9 +175,9 @@
 				F9A938FC1C05A3D1005C7977 /* CommentViewController.swift */,
 				F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */,
 				F9FDA02B1BFE8F9400A4F6D5 /* AnswerViewController.swift */,
-				F9FDA0251BFE655000A4F6D5 /* Data.swift */,
 				F9FDA0191BFD5E0200A4F6D5 /* LoginViewController.swift */,
 				F9A938F21C058D5F005C7977 /* AddAnswerViewController.swift */,
+				F9A939291C083569005C7977 /* FriendsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -178,6 +187,7 @@
 			children = (
 				F9FDA02D1BFE97BC00A4F6D5 /* viewTableCell.xib */,
 				F9A939041C068675005C7977 /* commentTblCell.xib */,
+				F9A9392B1C0835E7005C7977 /* FriendTblCell.xib */,
 			);
 			name = Xib;
 			sourceTree = "<group>";
@@ -196,6 +206,8 @@
 		F9A939281C06E4DB005C7977 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F9FDA0251BFE655000A4F6D5 /* Data.swift */,
+				F9A9392F1C08385C005C7977 /* Friend.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -281,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A9392C1C0835E7005C7977 /* FriendTblCell.xib in Resources */,
 				F9A939051C068675005C7977 /* commentTblCell.xib in Resources */,
 				F93CD7FC1BF718D7006A5C3A /* Main.storyboard in Resources */,
 				F93CD8011BF718D7006A5C3A /* LaunchScreen.xib in Resources */,
@@ -307,6 +320,7 @@
 				F93CD7F91BF718D7006A5C3A /* ViewController.swift in Sources */,
 				F9FDA01C1BFD6F5400A4F6D5 /* DailyViewController.swift in Sources */,
 				F9FDA02C1BFE8F9400A4F6D5 /* AnswerViewController.swift in Sources */,
+				F9A9392A1C083569005C7977 /* FriendsViewController.swift in Sources */,
 				F9FDA02A1BFE8B7900A4F6D5 /* AnswerCell.swift in Sources */,
 				F9A938FD1C05A3D1005C7977 /* CommentViewController.swift in Sources */,
 				F9A938F51C058DC5005C7977 /* AddAnswerSegue.swift in Sources */,
@@ -315,9 +329,11 @@
 				F9A938F31C058D5F005C7977 /* AddAnswerViewController.swift in Sources */,
 				F9A938FB1C05A265005C7977 /* commentTableCell.swift in Sources */,
 				F9A939011C0670CA005C7977 /* ViewCommentsUwindSegue.swift in Sources */,
+				F9A939301C08385C005C7977 /* Friend.swift in Sources */,
 				F9A938FF1C0670B9005C7977 /* ViewCommentsSegue.swift in Sources */,
 				F9A938F71C058DDA005C7977 /* AddAnswerUnwindSegue.swift in Sources */,
 				F9FDA0301BFE98A700A4F6D5 /* TblCell.swift in Sources */,
+				F9A9392E1C083750005C7977 /* FriendTableCell.swift in Sources */,
 				F9FDA0261BFE655000A4F6D5 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

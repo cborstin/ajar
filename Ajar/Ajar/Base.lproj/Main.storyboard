@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="2456" y="317"/>
         </scene>
-        <!--Item 2-->
+        <!--FriendsViewController-->
         <scene sceneID="iKo-8b-U0U">
             <objects>
-                <viewController id="OT0-rr-8cg" sceneMemberID="viewController">
+                <viewController id="OT0-rr-8cg" userLabel="FriendsViewController" customClass="FriendsViewController" customModule="Ajar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pKw-Ls-NLn"/>
                         <viewControllerLayoutGuide type="bottom" id="S5h-ZK-M4b"/>
@@ -221,10 +221,70 @@
                     <view key="view" contentMode="scaleToFill" id="6Dk-Dv-jJk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stuffed" translatesAutoresizingMaskIntoConstraints="NO" id="dUq-nj-3Bo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperWhite" translatesAutoresizingMaskIntoConstraints="NO" id="9dt-m3-u2F">
+                                <rect key="frame" x="20" y="18" width="560" height="515"/>
+                                <animations/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3tE-TE-2Gb">
+                                <rect key="frame" x="82" y="51" width="436" height="450"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OT0-rr-8cg" id="s6T-sC-rVl"/>
+                                    <outlet property="delegate" destination="OT0-rr-8cg" id="izg-EW-G7P"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dUq-nj-3Bo" firstAttribute="centerX" secondItem="6Dk-Dv-jJk" secondAttribute="centerX" id="1uj-Hx-uKo"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="centerY" secondItem="dUq-nj-3Bo" secondAttribute="centerY" id="GBH-gb-CWs"/>
+                            <constraint firstItem="dUq-nj-3Bo" firstAttribute="width" secondItem="6Dk-Dv-jJk" secondAttribute="width" id="GID-TN-qs9"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="centerY" secondItem="3tE-TE-2Gb" secondAttribute="centerY" id="MN7-Pj-kvO"/>
+                            <constraint firstItem="3tE-TE-2Gb" firstAttribute="width" secondItem="9dt-m3-u2F" secondAttribute="width" id="N6Z-0R-5cr"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="centerY" secondItem="dUq-nj-3Bo" secondAttribute="centerY" constant="10" id="OYq-eR-Qvc"/>
+                            <constraint firstItem="dUq-nj-3Bo" firstAttribute="height" secondItem="6Dk-Dv-jJk" secondAttribute="height" constant="-49" id="PD6-on-WDD"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="centerX" secondItem="dUq-nj-3Bo" secondAttribute="centerX" id="TYd-nL-ogQ"/>
+                            <constraint firstItem="3tE-TE-2Gb" firstAttribute="centerX" secondItem="9dt-m3-u2F" secondAttribute="centerX" id="UPI-lJ-4xD"/>
+                            <constraint firstItem="dUq-nj-3Bo" firstAttribute="centerY" secondItem="6Dk-Dv-jJk" secondAttribute="centerY" constant="-24.5" id="WP9-Fb-ohi"/>
+                            <constraint firstItem="3tE-TE-2Gb" firstAttribute="leading" secondItem="6Dk-Dv-jJk" secondAttribute="leadingMargin" constant="62" id="Y7L-Dq-QQ2"/>
+                            <constraint firstItem="3tE-TE-2Gb" firstAttribute="leading" secondItem="9dt-m3-u2F" secondAttribute="trailing" constant="-498" id="bb0-Zd-C1e"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="centerX" secondItem="dUq-nj-3Bo" secondAttribute="centerX" id="cf3-TK-xoS"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="height" secondItem="dUq-nj-3Bo" secondAttribute="height" id="dek-Ao-N1o"/>
+                            <constraint firstItem="3tE-TE-2Gb" firstAttribute="height" secondItem="9dt-m3-u2F" secondAttribute="height" id="eNk-b7-fX0"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="centerX" secondItem="3tE-TE-2Gb" secondAttribute="centerX" id="eSP-Fp-3UN"/>
+                            <constraint firstItem="3tE-TE-2Gb" firstAttribute="top" secondItem="pKw-Ls-NLn" secondAttribute="bottom" constant="31" id="gno-mR-sMc"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="leading" secondItem="6Dk-Dv-jJk" secondAttribute="leadingMargin" id="gsr-kS-BBS"/>
+                            <constraint firstItem="3tE-TE-2Gb" firstAttribute="top" secondItem="9dt-m3-u2F" secondAttribute="bottom" constant="-482" id="hpe-jl-bPe"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="width" secondItem="dUq-nj-3Bo" secondAttribute="width" id="jc6-pW-GLb"/>
+                            <constraint firstItem="3tE-TE-2Gb" firstAttribute="centerY" secondItem="9dt-m3-u2F" secondAttribute="centerY" id="k43-Mg-Mkp"/>
+                            <constraint firstItem="S5h-ZK-M4b" firstAttribute="top" secondItem="9dt-m3-u2F" secondAttribute="bottom" constant="18" id="ziz-5B-eI1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OYq-eR-Qvc"/>
+                                <exclude reference="cf3-TK-xoS"/>
+                                <exclude reference="dek-Ao-N1o"/>
+                                <exclude reference="jc6-pW-GLb"/>
+                                <exclude reference="N6Z-0R-5cr"/>
+                                <exclude reference="UPI-lJ-4xD"/>
+                                <exclude reference="bb0-Zd-C1e"/>
+                                <exclude reference="eNk-b7-fX0"/>
+                                <exclude reference="hpe-jl-bPe"/>
+                                <exclude reference="k43-Mg-Mkp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="mDm-i3-eDv"/>
+                    <connections>
+                        <outlet property="tableView" destination="3tE-TE-2Gb" id="yK7-Z2-dpk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsh-f6-ovt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -605,6 +665,7 @@
         <image name="Chalk" width="4300" height="3642"/>
         <image name="LoginBackground" width="7117" height="4090"/>
         <image name="NoteWhite" width="591" height="592"/>
+        <image name="PaperWhite" width="378" height="551"/>
         <image name="Stuffed" width="3279" height="3030"/>
     </resources>
 </document>
