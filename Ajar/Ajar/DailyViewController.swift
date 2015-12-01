@@ -9,6 +9,7 @@
 import UIKit
 
 class DailyViewController: UIViewController, UIScrollViewDelegate {
+    
     @IBOutlet var questionScrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
     var jarImages: [UIImage] = []
@@ -35,9 +36,20 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
         loadVisiblePages()
         //setupGestureRecognizer()
         
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        //self.automaticallyAdjustsScrollViewInsets = false
+        
+        
         
 
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = false
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,7 +84,7 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
         }
         
         // 1
-        if let pageView = pageViews[page] {
+        if let _ = pageViews[page] {
             // he view is already loaded.
             
         } else {
@@ -153,6 +165,8 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
     func tapDetected() {
         print("Single Tap on imageview")
     }
+    
+
       
     /*
     // MARK: - Navigation

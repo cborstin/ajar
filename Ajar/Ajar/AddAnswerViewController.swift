@@ -10,6 +10,7 @@ import UIKit
 
 class AddAnswerViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet var btnCancel: UIButton!
     @IBOutlet weak var userText: UITextView!
     @IBOutlet weak var postButton: UIButton!
     override func viewDidLoad() {
@@ -17,14 +18,16 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
 
         // Do any additional setup after loading the view.
         postButton.addTarget(self, action: "postTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+        postButton.addTarget(self, action: "cancelTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         userText.delegate = self
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "idAddAnswerUnwindSegue" {
             if let answerViewController = segue.destinationViewController as? AnswerViewController {
-                let myText = sender as? String
-                var newResponse = Data(fname: "NoteWhite", resp: myText!, name: "Amy", comment: [], img: "tiger")
-                answerViewController.response.append(newResponse)
+                if let myText = sender as? String{
+                    let newResponse = Data(fname: "NoteWhite", resp: myText, name: "Amy", comment: [], img: "tiger")
+                    answerViewController.response.append(newResponse)
+                }
                 
             }
         }
@@ -32,6 +35,9 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
     
     func postTapped(sender: UIButton!) {
         self.performSegueWithIdentifier("idAddAnswerUnwindSegue", sender: userText.text)
+    }
+    func cancelTapped(sender: UIButton!) {
+        self.performSegueWithIdentifier("idAddAnswerUnwindSegue", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {

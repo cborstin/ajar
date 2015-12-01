@@ -11,8 +11,9 @@ import UIKit
 class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
+    @IBOutlet var btnAddFriend: UIButton!
     @IBOutlet var tableView: UITableView!
-    let friends = [
+    var friends = [
         Friend(img: "elephant", name: "Cat"),
         Friend(img: "tiger", name: "Cindy"),
         Friend(img: "dog", name: "Karen")
@@ -21,11 +22,31 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var nib = UINib(nibName: "FriendTblCell", bundle: nil)
+        let nib = UINib(nibName: "FriendTblCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "friendCell")
         tableView.rowHeight = 100
         tableView.layer.borderWidth = 2.0;
         tableView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        btnAddFriend.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
+        let footerView =  UIView(frame: CGRectZero)
+        tableView.tableFooterView = footerView
+        tableView.tableFooterView!.hidden = true
+        tableView.backgroundColor = UIColor.clearColor()
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+    }
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    func pressed(sender: UIButton!){
+        performSegueWithIdentifier("idAddFriendSegue", sender: nil)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "idAddFriendSegue" {
+            /*if let addFriendViewController = segue.destinationViewController as? AddFriendViewController {
+                
+            }*/
+        }
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,7 +56,7 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         return friends.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:FriendTableCell = self.tableView.dequeueReusableCellWithIdentifier("friendCell") as! FriendTableCell
+        let cell:FriendTableCell = self.tableView.dequeueReusableCellWithIdentifier("friendCell") as! FriendTableCell
         cell.userIcon.image = UIImage(named: friends[indexPath.row].icon)
         cell.userName.text = friends[indexPath.row].username
         cell.backgroundColor = UIColor.clearColor()
@@ -45,7 +66,22 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("Yo")
     }
-
+    
+    @IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+        
+    }
+    override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+        if let id = identifier{
+            if id == "idAddFriendUnwindSegue" {
+                let unwindSegue = AddAnswerUnwindSegue(identifier: id, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+                    
+                })
+                return unwindSegue
+            }
+        }
+        
+        return super.segueForUnwindingToViewController(toViewController, fromViewController: fromViewController, identifier: identifier)!
+    }
 
     /*
     // MARK: - Navigation

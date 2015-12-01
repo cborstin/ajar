@@ -39,13 +39,21 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
             response = responseTwo
         }
         
-        var nib = UINib(nibName: "viewTableCell", bundle: nil)
+        let nib = UINib(nibName: "viewTableCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 220
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Bulb")!)
         self.tableView.backgroundView = nil
         self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.separatorColor = UIColor.clearColor()
+        
+        
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        self.tabBarController?.tabBar.hidden = true
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        
         
         
     }

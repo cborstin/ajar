@@ -1,14 +1,14 @@
 //
-//  AddAnswerUnwindSegue.swift
+//  BackUnwindSegue.swift
 //  Ajar
 //
-//  Created by Catherine Borsting on 11/24/15.
+//  Created by Catherine Borsting on 11/30/15.
 //  Copyright © 2015 Catherine Borsting. All rights reserved.
 //
 
 import UIKit
 
-class AddAnswerUnwindSegue: UIStoryboardSegue {
+class BackUnwindSegue: UIStoryboardSegue {
 
     override func perform() {
         // Assign the source and destination views to local variables.
@@ -30,4 +30,5 @@ class AddAnswerUnwindSegue: UIStoryboardSegue {
                 self.sourceViewController.dismissViewControllerAnimated(false, completion: nil)
         }
     }
+
 }
