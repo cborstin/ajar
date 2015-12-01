@@ -14,9 +14,9 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet var btnAddFriend: UIButton!
     @IBOutlet var tableView: UITableView!
     var friends = [
-        Friend(img: "elephant", name: "Cat"),
-        Friend(img: "tiger", name: "Cindy"),
-        Friend(img: "dog", name: "Karen")
+        Friend(img: "elephant", name: "Cat", locate: "Los Angeles", age: "1-2"),
+        Friend(img: "tiger", name: "Cindy", locate: "New York", age: "2-3"),
+        Friend(img: "dog", name: "Karen", locate: "San Francisco", age: "2-4")
     ]
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,9 +11,13 @@ import Foundation
 class Friend {
     let icon : String
     let username: String
-    init(img : String, name : String) {
+    let location: String
+    let ages: String
+    init(img : String, name : String, locate: String, age: String) {
         self.icon = img
         self.username = name
+        self.location = locate
+        self.ages = age
     }
     
 }

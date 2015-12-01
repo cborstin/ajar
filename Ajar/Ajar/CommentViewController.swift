@@ -30,6 +30,12 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.separatorColor = UIColor.clearColor()
         btnPost.addTarget(self, action: "postPressed:", forControlEvents: .TouchUpInside)
+        
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        self.tabBarController?.tabBar.hidden = true
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
     }
     func postPressed(sender: AnyObject?) {
         //Data: (fname : String, resp : String, name: String, comment: [(String, String, String)], img: String)
