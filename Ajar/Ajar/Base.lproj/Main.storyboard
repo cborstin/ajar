@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -409,23 +410,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-uq-k2v">
-                                <rect key="frame" x="550" y="520" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="s8b-dA-axc" kind="show" identifier="idAddAnswerSegue" customClass="AddAnswerSegue" customModule="Ajar" customModuleProvider="target" id="cOd-qb-PIX"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you grateful for today?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYd-cD-9ve">
-                                <rect key="frame" x="16" y="0.0" width="568" height="65"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mVt-8X-YuY">
                                 <rect key="frame" x="18" y="116" width="564" height="367"/>
                                 <animations/>
@@ -436,14 +420,38 @@
                                     <outlet property="delegate" destination="Jz9-Ya-Loo" id="drM-Wx-99L"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you grateful for today?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYd-cD-9ve">
+                                <rect key="frame" x="16" y="0.0" width="568" height="65"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-uq-k2v">
+                                <rect key="frame" x="493" y="491" width="89" height="52"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YNG-uq-k2v" secondAttribute="height" multiplier="89:52" id="VGq-fE-0xr"/>
+                                    <constraint firstAttribute="height" constant="52" id="iCN-v8-pmf"/>
+                                    <constraint firstAttribute="width" constant="89" id="uZT-46-1sR"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="s8b-dA-axc" kind="show" identifier="idAddAnswerSegue" id="cOd-qb-PIX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mVt-8X-YuY" firstAttribute="top" secondItem="fS5-cP-1Ti" secondAttribute="bottom" constant="52" id="1n2-xT-Pba"/>
+                            <constraint firstItem="YNG-uq-k2v" firstAttribute="top" secondItem="mVt-8X-YuY" secondAttribute="bottom" constant="8" id="9X5-cV-PvD"/>
                             <constraint firstItem="mVt-8X-YuY" firstAttribute="top" secondItem="fS5-cP-1Ti" secondAttribute="bottom" constant="24" id="JQ8-tV-lwO"/>
                             <constraint firstItem="yqw-fK-H1o" firstAttribute="width" secondItem="WkQ-0V-qzJ" secondAttribute="width" id="MKk-d8-iiI"/>
                             <constraint firstItem="yqw-fK-H1o" firstAttribute="centerX" secondItem="WkQ-0V-qzJ" secondAttribute="centerX" id="MUO-ZX-4Fy"/>
+                            <constraint firstItem="YNG-uq-k2v" firstAttribute="trailing" secondItem="mVt-8X-YuY" secondAttribute="trailing" id="Oqg-RB-zMr"/>
                             <constraint firstItem="rnX-Y3-HLa" firstAttribute="top" secondItem="mVt-8X-YuY" secondAttribute="bottom" constant="39" id="TKb-hO-zN9"/>
                             <constraint firstItem="yqw-fK-H1o" firstAttribute="centerY" secondItem="WkQ-0V-qzJ" secondAttribute="centerY" id="aGE-GW-sfE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mVt-8X-YuY" secondAttribute="trailing" constant="-2" id="arG-1E-1Ke"/>
@@ -461,6 +469,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btnAdd" destination="YNG-uq-k2v" id="eFk-QS-Dbz"/>
                         <outlet property="questionLabel" destination="OYd-cD-9ve" id="bjY-ls-4hk"/>
                         <outlet property="tableView" destination="mVt-8X-YuY" id="Tba-Pq-zPn"/>
                         <segue destination="JaI-HN-RWa" kind="unwind" identifier="idAnswerUnwindSegue" unwindAction="returnFromSegueActions:" id="NvH-lz-wpM"/>

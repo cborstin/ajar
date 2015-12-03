@@ -15,6 +15,7 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var postButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
         postButton.addTarget(self, action: "postTapped:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -25,7 +26,9 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
         self.navigationController!.navigationBar.translucent = true
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+
     }
+    /*
     
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -67,5 +70,6 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+*/
 
 }

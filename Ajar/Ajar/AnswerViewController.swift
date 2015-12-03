@@ -10,6 +10,7 @@ import UIKit
 
 class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var tableView: UITableView!
     var index: Int!
@@ -51,6 +52,10 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
+        
+        btnAdd.layer.cornerRadius = 5
+        btnAdd.layer.borderWidth = 1
+        btnAdd.layer.borderColor = UIColor.whiteColor().CGColor
         
     }
     override func viewDidAppear(animated: Bool) {
