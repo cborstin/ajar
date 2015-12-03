@@ -32,13 +32,11 @@ class UserViewController: UIViewController {
             if let selectOptionViewController = segue.destinationViewController as? SelectOptionViewController{
                 selectOptionViewController.index = button.tag
                 if(button.tag == 0){
-                    selectOptionViewController.data = ["Palo Alto", "Mountain View", "New York", "London"]
+                    selectOptionViewController.data = ["Palo Alto", "Mountain View", "New York", "Chicago", "London", "Sacramento"]
                 }
                 else{
                     selectOptionViewController.data = ["1-2", "1-3", "1-4", "1-5"]
                 }
-                
-            
             }
         }
     }
