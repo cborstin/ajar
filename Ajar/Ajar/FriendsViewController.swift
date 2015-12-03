@@ -54,6 +54,8 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell:FriendTableCell = self.tableView.dequeueReusableCellWithIdentifier("friendCell") as! FriendTableCell
         cell.userIcon.image = UIImage(named: friends[indexPath.row].icon)
         cell.userName.text = friends[indexPath.row].username
+        cell.lblUsernameInput.text = friends[indexPath.row].location
+        cell.lblAgeInput.text = friends[indexPath.row].ages
         cell.backgroundColor = UIColor.clearColor()
         return cell
         

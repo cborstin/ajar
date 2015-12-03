@@ -10,7 +10,6 @@ import UIKit
 
 class AddAnswerViewController: UIViewController, UITextViewDelegate {
 
-    @IBOutlet var btnCancel: UIButton!
     @IBOutlet weak var userText: UITextView!
     @IBOutlet weak var postButton: UIButton!
     override func viewDidLoad() {
@@ -26,10 +25,12 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
         self.navigationController!.navigationBar.translucent = true
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        postButton.layer.cornerRadius = 5
+        postButton.layer.borderWidth = 1
+        postButton.layer.borderColor = UIColor.whiteColor().CGColor
 
     }
-    /*
-    
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
@@ -69,7 +70,7 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 */
 
 }
