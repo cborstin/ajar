@@ -13,9 +13,9 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet var tableView: UITableView!
     @IBOutlet var btnBack: UIButton!
     var friends = [
-        Friend(img: "elephant", name: "Rachel", locate: "Chicago", age: "4-5"),
-        Friend(img: "tiger", name: "Nathan", locate: "London", age: "4-5"),
-        Friend(img: "dog", name: "Griffin", locate: "Sacramento", age: "1-2")
+        Friend(img: "sheep", name: "Rachel", locate: "Chicago", age: "4-5"),
+        Friend(img: "giraffe", name: "Nathan", locate: "London", age: "4-5"),
+        Friend(img: "hippopotamus", name: "Griffin", locate: "Sacramento", age: "1-2")
     ]
     var addedFriends: [Friend] = []
     override func viewDidLoad() {
