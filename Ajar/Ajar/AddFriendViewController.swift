@@ -11,7 +11,6 @@ import UIKit
 class AddFriendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var btnBack: UIButton!
     var friends = [
         Friend(img: "sheep", name: "Rachel", locate: "Chicago", age: "4-5"),
         Friend(img: "giraffe", name: "Nathan", locate: "London", age: "4-5"),
@@ -19,7 +18,6 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
     ]
     var addedFriends: [Friend] = []
     override func viewDidLoad() {
-        btnBack.addTarget(self, action: "pressedBack:", forControlEvents: .TouchUpInside)
         let nib = UINib(nibName: "AddFriendTblCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "addFriendCell")
         tableView.rowHeight = 100
@@ -32,11 +30,7 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
-    }
-    
-    
-    func pressedBack(sender: UIButton!){
-        performSegueWithIdentifier("idAddFriendUnwindSegue", sender: self)
+ 
     }
     
     
@@ -50,7 +44,11 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.lblUsername.text = friends[indexPath.row].username
         cell.btnAdd.tag = indexPath.row
         cell.btnAdd.addTarget(self, action: "pressedAdd:", forControlEvents: .TouchUpInside)
+        cell.lblLocation.text = friends[indexPath.row].location
+        cell.lblAges.text = friends[indexPath.row].ages
         cell.separatorInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+  
+        
         
         return cell
     }
@@ -59,6 +57,7 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
             if let parentView = parentView as? UINavigationController {
                 if let parentView = parentView.viewControllers[0] as? FriendsViewController{
                     parentView.friends.append(friends[sender.tag])
+                    parentView.potentialFriends.removeAtIndex(sender.tag)
                     friends.removeAtIndex(sender.tag)
                     tableView.reloadData()
                 }

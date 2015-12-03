@@ -13,10 +13,17 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet var btnAddFriend: UIButton!
     @IBOutlet var tableView: UITableView!
+    
+    var potentialFriends = [
+        Friend(img: "sheep", name: "Rachel", locate: "Chicago", age: "4-5"),
+        Friend(img: "giraffe", name: "Nathan", locate: "London", age: "4-5"),
+        Friend(img: "hippopotamus", name: "Griffin", locate: "Sacramento", age: "1-2")
+    ]
     var friends = [
         Friend(img: "tiger", name: "Cat", locate: "Los Angeles", age: "1-2"),
         Friend(img: "dog", name: "Cindy", locate: "New York", age: "2-3"),
         Friend(img: "elephant", name: "Karen", locate: "San Francisco", age: "2-4")    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,15 +45,21 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
-        
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         tableView.reloadData()
     }
+    
     func pressed(sender: UIButton!){
         performSegueWithIdentifier("idAddFriendSegue", sender: nil)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "idAddFriendSegue"{
+            if let addFriendViewController = segue.destinationViewController as? AddFriendViewController{
+                addFriendViewController.friends = potentialFriends
+            }
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

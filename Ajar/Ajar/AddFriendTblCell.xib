@@ -8,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addFriendCell" rowHeight="75" id="pjg-We-UR6" customClass="AddFriendTableCell" customModule="Ajar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="234" height="75"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addFriendCell" rowHeight="100" id="pjg-We-UR6" customClass="AddFriendTableCell" customModule="Ajar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="234" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pjg-We-UR6" id="5Ni-nC-NF1">
-                <rect key="frame" x="0.0" y="0.0" width="234" height="74"/>
+                <rect key="frame" x="0.0" y="0.0" width="234" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ld-mY-4Qs">
@@ -34,12 +34,26 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdh-e1-1vC">
-                        <rect key="frame" x="173" y="0.0" width="61" height="74"/>
+                        <rect key="frame" x="173" y="0.0" width="61" height="99"/>
                         <animations/>
                         <state key="normal" title="Add">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkQ-hY-rfJ">
+                        <rect key="frame" x="39" y="68" width="126" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgJ-Uc-lTZ">
+                        <rect key="frame" x="39" y="39" width="126" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
                 <constraints>
@@ -65,11 +79,13 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="btnAdd" destination="Rdh-e1-1vC" id="0O3-Nc-E5U"/>
+                <outlet property="btnAdd" destination="Rdh-e1-1vC" id="CQ7-S0-6gY"/>
                 <outlet property="imgIcon" destination="7Ld-mY-4Qs" id="iCC-qf-2VH"/>
+                <outlet property="lblAges" destination="GkQ-hY-rfJ" id="eS9-Ge-bjT"/>
+                <outlet property="lblLocation" destination="GgJ-Uc-lTZ" id="WfB-k1-fq6"/>
                 <outlet property="lblUsername" destination="zBt-qQ-tfy" id="j60-gv-Yrv"/>
             </connections>
-            <point key="canvasLocation" x="249" y="273.5"/>
+            <point key="canvasLocation" x="249" y="286"/>
         </tableViewCell>
     </objects>
 </document>

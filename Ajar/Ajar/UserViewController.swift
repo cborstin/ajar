@@ -17,6 +17,7 @@ class UserViewController: UIViewController {
     @IBOutlet weak var btnLocation: UIButton!
     @IBOutlet weak var btnAge: UIButton!
     
+    @IBOutlet var imgProfBackground: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,11 @@ class UserViewController: UIViewController {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
+        imgProfBackground.backgroundColor = UIColor.whiteColor()
+        imgProfBackground.layer.borderWidth = 2
+        imgProfBackground.layer.borderColor = UIColor.darkGrayColor().CGColor
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let button = sender as? UIButton{
             if let selectOptionViewController = segue.destinationViewController as? SelectOptionViewController{
