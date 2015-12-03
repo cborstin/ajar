@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CommentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet var addCommentText: UITextField!
     @IBOutlet var btnPost: UIButton!
@@ -28,7 +28,6 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Bulb")!)
         self.tableView.backgroundView = nil
         self.tableView.backgroundColor = UIColor.clearColor()
-        self.tableView.separatorColor = UIColor.clearColor()
         btnPost.addTarget(self, action: "postPressed:", forControlEvents: .TouchUpInside)
         
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -40,6 +39,22 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         btnPost.layer.cornerRadius = 5
         btnPost.layer.borderWidth = 1
         btnPost.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        
+        let footerView =  UIView(frame: CGRectZero)
+        tableView.tableFooterView = footerView
+        tableView.tableFooterView!.hidden = true
+        tableView.backgroundColor = UIColor.clearColor()
+    }
+    func keyboardWillShow(notification: NSNotification) {
+        self.view.frame.origin.y -= 150
+        
+    }
+    func keyboardWillHide(notification: NSNotification) {
+        self.view.frame.origin.y += 150
+        
     }
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -54,6 +69,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         //Data: (fname : String, resp : String, name: String, comment: [(String, String, String)], img: String)
         let userInput = addCommentText.text
         response.comments.append(("Amy", "elephant", userInput!))
+        self.addCommentText.text = ""
         tableView.reloadData()
     }
 

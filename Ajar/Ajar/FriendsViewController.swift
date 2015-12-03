@@ -36,7 +36,10 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
+        
+        
     }
+    
     override func viewDidAppear(animated: Bool) {
         tableView.reloadData()
     }
