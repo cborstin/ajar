@@ -49,7 +49,7 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
         if segue.identifier == "idAddAnswerUnwindSegue" {
             if let answerViewController = segue.destinationViewController as? AnswerViewController {
                 if let myText = sender as? String{
-                    let newResponse = Data(fname: "NoteWhite", resp: myText, name: "Amy", comment: [], img: "tiger")
+                    let newResponse = Data(fname: "NoteWhite", resp: myText, name: "Amy", comment: [], img: "cattle")
                     answerViewController.response.append(newResponse)
                 }
                 
