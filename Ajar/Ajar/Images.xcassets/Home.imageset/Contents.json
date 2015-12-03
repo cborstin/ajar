@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Home by Tancrède Chaleil from the Noun Project_white.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Home@2x.png",
       "scale" : "2x"
     },
     {

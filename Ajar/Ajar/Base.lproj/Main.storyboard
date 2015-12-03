@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ocP-N7-dhx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ocP-N7-dhx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -468,11 +468,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperWhite" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-s0-JFg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PaperWhite" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-s0-JFg">
                                 <rect key="frame" x="20" y="75" width="560" height="450"/>
                                 <animations/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GBc-2V-pRR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GBc-2V-pRR">
                                 <rect key="frame" x="82" y="94" width="436" height="412"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -604,7 +604,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoteWhite" translatesAutoresizingMaskIntoConstraints="NO" id="oei-iW-Rdx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="NoteWhite" translatesAutoresizingMaskIntoConstraints="NO" id="oei-iW-Rdx">
                                 <rect key="frame" x="20" y="132" width="560" height="335"/>
                                 <animations/>
                             </imageView>
@@ -622,7 +622,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Text Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hHe-tb-RSm">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Enter Text Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hHe-tb-RSm">
                                 <rect key="frame" x="120" y="172" width="360" height="255"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.98251390706806285" green="0.98251390706806285" blue="0.98251390706806285" alpha="1" colorSpace="calibratedRGB"/>
@@ -632,7 +632,7 @@
                                     <outlet property="delegate" destination="s8b-dA-axc" id="f84-Ny-3JW"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERo-ND-aw8">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERo-ND-aw8">
                                 <rect key="frame" x="20" y="20" width="62" height="30"/>
                                 <animations/>
                                 <state key="normal" title="X Cancel">
@@ -890,7 +890,7 @@
         <scene sceneID="rnj-Ft-8cM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vFh-R2-3pg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="Home" id="Hga-6d-9Rg"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home" id="Hga-6d-9Rg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zgc-pe-cY3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -906,11 +906,11 @@
             </objects>
             <point key="canvasLocation" x="3965" y="-5"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="Cmo-oX-hoX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N8D-5O-8zJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oC3-va-0fM"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="User" id="oC3-va-0fM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hc1-Bt-elp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -926,11 +926,11 @@
             </objects>
             <point key="canvasLocation" x="6965" y="-5"/>
         </scene>
-        <!--Item 2-->
+        <!--Friends-->
         <scene sceneID="70K-TD-LqN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bUR-Pv-pSt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="mDm-i3-eDv"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="Team" id="mDm-i3-eDv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gdl-bX-bQw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -949,11 +949,13 @@
     </scenes>
     <resources>
         <image name="Chalk" width="4300" height="3642"/>
-        <image name="Home" width="569" height="535"/>
+        <image name="Home" width="30" height="30"/>
         <image name="LoginBackground" width="7117" height="4090"/>
         <image name="NoteWhite" width="591" height="592"/>
         <image name="PaperWhite" width="378" height="551"/>
         <image name="Stuffed" width="3279" height="3030"/>
+        <image name="Team" width="34" height="30"/>
+        <image name="User" width="25" height="30"/>
         <image name="cat" width="54" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>

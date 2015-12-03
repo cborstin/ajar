@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "user by Lucian Dinu_white.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "User@2x.png",
       "scale" : "2x"
     },
     {
