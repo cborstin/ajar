@@ -29,7 +29,7 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.backgroundColor = UIColor.clearColor()
         tableView.layer.borderWidth = 2.0;
         tableView.layer.borderColor = UIColor.lightGrayColor().CGColor
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+
         
     }
     
@@ -39,11 +39,9 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "idAddFriendUnwindSegue" {
-            if let friendViewController = segue.destinationViewController as? FriendsViewController {
+        if let friendViewController = segue.destinationViewController as? FriendsViewController {
                 friendViewController.friends += addedFriends
                 
-            }
         }
     }
     

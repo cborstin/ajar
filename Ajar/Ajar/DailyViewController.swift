@@ -39,7 +39,6 @@ class DailyViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
-        //self.automaticallyAdjustsScrollViewInsets = false
         
         
         

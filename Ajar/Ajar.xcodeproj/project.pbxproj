@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		F90792801C0E58ED00A642AA /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		F90792821C0E626500A642AA /* SelectOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectOptionViewController.swift; sourceTree = "<group>"; };
+		F90792821C0E626500A642AA /* SelectOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectOptionViewController.swift; path = ../SelectOptionViewController.swift; sourceTree = "<group>"; };
 		F93CD7F11BF718D7006A5C3A /* Ajar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ajar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93CD7F51BF718D7006A5C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93CD7F61BF718D7006A5C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +111,6 @@
 		F93CD7E81BF718D7006A5C3A = {
 			isa = PBXGroup;
 			children = (
-				F90792821C0E626500A642AA /* SelectOptionViewController.swift */,
 				F93CD7F31BF718D7006A5C3A /* Ajar */,
 				F93CD8091BF718D8006A5C3A /* AjarTests */,
 				F93CD7F21BF718D7006A5C3A /* Products */,
@@ -186,6 +185,7 @@
 		F9A939251C06E43E005C7977 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F90792821C0E626500A642AA /* SelectOptionViewController.swift */,
 				F93CD7F81BF718D7006A5C3A /* ViewController.swift */,
 				F9A938FC1C05A3D1005C7977 /* CommentViewController.swift */,
 				F9FDA01B1BFD6F5400A4F6D5 /* DailyViewController.swift */,

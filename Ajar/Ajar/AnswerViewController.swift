@@ -51,10 +51,6 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
-        self.tabBarController?.tabBar.hidden = true
-
-        
-        
         
     }
     override func viewDidAppear(animated: Bool) {

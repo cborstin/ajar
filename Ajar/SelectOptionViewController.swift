@@ -26,9 +26,7 @@ class SelectOptionViewController: UIViewController, UIPickerViewDelegate, UIPick
         // Dispose of any resources that can be recreated.
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("Segue Performed")
         if let userViewController = segue.destinationViewController as? UserViewController{
-            print(selected)
             if(index == 0){
                 userViewController.lblLocation.text = selected
             }

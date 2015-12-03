@@ -32,21 +32,12 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.tableFooterView = footerView
         tableView.tableFooterView!.hidden = true
         tableView.backgroundColor = UIColor.clearColor()
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
     override func viewDidAppear(animated: Bool) {
         tableView.reloadData()
     }
     func pressed(sender: UIButton!){
         performSegueWithIdentifier("idAddFriendSegue", sender: nil)
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "idAddFriendSegue" {
-            /*if let addFriendViewController = segue.destinationViewController as? AddFriendViewController {
-                
-            }*/
-        }
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

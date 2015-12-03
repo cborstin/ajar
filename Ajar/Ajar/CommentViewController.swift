@@ -30,7 +30,6 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.separatorColor = UIColor.clearColor()
         btnPost.addTarget(self, action: "postPressed:", forControlEvents: .TouchUpInside)
-        self.tabBarController?.tabBar.hidden = true
 
     }
     override func viewDidAppear(animated: Bool) {
