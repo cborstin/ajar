@@ -12,7 +12,7 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var btnBack: UIButton!
-    let friends = [
+    var friends = [
         Friend(img: "elephant", name: "Rachel", locate: "Chicago", age: "4-5"),
         Friend(img: "tiger", name: "Nathan", locate: "London", age: "4-5"),
         Friend(img: "dog", name: "Griffin", locate: "Sacramento", age: "1-2")
@@ -29,8 +29,6 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.backgroundColor = UIColor.clearColor()
         tableView.layer.borderWidth = 2.0;
         tableView.layer.borderColor = UIColor.lightGrayColor().CGColor
-
-        
     }
     
     
@@ -38,12 +36,6 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
         performSegueWithIdentifier("idAddFriendUnwindSegue", sender: self)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let friendViewController = segue.destinationViewController as? FriendsViewController {
-                friendViewController.friends += addedFriends
-                
-        }
-    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("Yo")
@@ -60,7 +52,15 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     func pressedAdd(sender: UIButton!){
-        addedFriends.append(friends[sender.tag])
+        if let parentView = self.parentViewController {
+            if let parentView = parentView as? UINavigationController {
+                if let parentView = parentView.viewControllers[0] as? FriendsViewController{
+                    parentView.friends.append(friends[sender.tag])
+                    friends.removeAtIndex(sender.tag)
+                    tableView.reloadData()
+                }
+            }
+        }
         sender.removeTarget(self, action: "pressedAdd:", forControlEvents: .TouchUpInside)
     }
     

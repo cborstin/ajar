@@ -227,18 +227,9 @@
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperWhite" translatesAutoresizingMaskIntoConstraints="NO" id="9dt-m3-u2F">
-                                <rect key="frame" x="20" y="51" width="560" height="450"/>
+                                <rect key="frame" x="20" y="72" width="560" height="429"/>
                                 <animations/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3tE-TE-2Gb">
-                                <rect key="frame" x="82" y="70" width="436" height="412"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="OT0-rr-8cg" id="s6T-sC-rVl"/>
-                                    <outlet property="delegate" destination="OT0-rr-8cg" id="izg-EW-G7P"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaJ-Ba-K2Y">
                                 <rect key="frame" x="542" y="509" width="30" height="30"/>
                                 <animations/>
@@ -246,12 +237,21 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3tE-TE-2Gb">
+                                <rect key="frame" x="82" y="114" width="436" height="346"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OT0-rr-8cg" id="s6T-sC-rVl"/>
+                                    <outlet property="delegate" destination="OT0-rr-8cg" id="izg-EW-G7P"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dUq-nj-3Bo" firstAttribute="centerX" secondItem="6Dk-Dv-jJk" secondAttribute="centerX" id="1uj-Hx-uKo"/>
-                            <constraint firstItem="9dt-m3-u2F" firstAttribute="centerY" secondItem="dUq-nj-3Bo" secondAttribute="centerY" id="GBH-gb-CWs"/>
+                            <constraint firstItem="9dt-m3-u2F" firstAttribute="centerY" secondItem="dUq-nj-3Bo" secondAttribute="centerY" constant="11" id="GBH-gb-CWs"/>
                             <constraint firstItem="dUq-nj-3Bo" firstAttribute="width" secondItem="6Dk-Dv-jJk" secondAttribute="width" id="GID-TN-qs9"/>
                             <constraint firstItem="9dt-m3-u2F" firstAttribute="centerY" secondItem="3tE-TE-2Gb" secondAttribute="centerY" id="MN7-Pj-kvO"/>
                             <constraint firstItem="3tE-TE-2Gb" firstAttribute="width" secondItem="9dt-m3-u2F" secondAttribute="width" id="N6Z-0R-5cr"/>
