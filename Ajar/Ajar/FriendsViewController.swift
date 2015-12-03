@@ -26,6 +26,9 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.rowHeight = 100
         tableView.layer.borderWidth = 2.0;
         tableView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        btnAddFriend.layer.cornerRadius = 5
+        btnAddFriend.layer.borderWidth = 1
+        btnAddFriend.layer.borderColor = UIColor.whiteColor().CGColor
         btnAddFriend.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
         let footerView =  UIView(frame: CGRectZero)
         tableView.tableFooterView = footerView
