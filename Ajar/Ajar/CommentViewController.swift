@@ -36,6 +36,10 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.navigationController!.navigationBar.translucent = true
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        btnPost.layer.cornerRadius = 5
+        btnPost.layer.borderWidth = 1
+        btnPost.layer.borderColor = UIColor.whiteColor().CGColor
     }
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.

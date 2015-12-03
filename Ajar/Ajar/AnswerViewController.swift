@@ -52,6 +52,7 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         
         btnAdd.layer.cornerRadius = 5
         btnAdd.layer.borderWidth = 1
