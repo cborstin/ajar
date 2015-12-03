@@ -25,7 +25,13 @@ class LoginViewController: UIViewController {
         BackgroundLabel.layer.shadowOffset = CGSize(width: 1, height: 1)
         BackgroundLabel.layer.shadowOpacity = 0.5
         BackgroundLabel.layer.shadowRadius = 2
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
 
+    }
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {

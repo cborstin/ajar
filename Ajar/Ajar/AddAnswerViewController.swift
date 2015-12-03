@@ -20,7 +20,18 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
         postButton.addTarget(self, action: "postTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         postButton.addTarget(self, action: "cancelTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         userText.delegate = self
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "idAddAnswerUnwindSegue" {
             if let answerViewController = segue.destinationViewController as? AnswerViewController {

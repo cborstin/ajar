@@ -30,8 +30,19 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.backgroundColor = UIColor.clearColor()
         self.tableView.separatorColor = UIColor.clearColor()
         btnPost.addTarget(self, action: "postPressed:", forControlEvents: .TouchUpInside)
-
+        
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    
     override func viewDidAppear(animated: Bool) {
         print(self.navigationController?.navigationBar.translucent)
     }

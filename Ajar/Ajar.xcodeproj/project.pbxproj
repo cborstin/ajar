@@ -135,7 +135,6 @@
 				F9A939241C06E35E005C7977 /* View */,
 				F9A939281C06E4DB005C7977 /* Classes */,
 				F93CD7FA1BF718D7006A5C3A /* Main.storyboard */,
-				F90792801C0E58ED00A642AA /* UserViewController.swift */,
 				F93CD7F61BF718D7006A5C3A /* AppDelegate.swift */,
 				F93CD7FD1BF718D7006A5C3A /* Images.xcassets */,
 				F93CD7FF1BF718D7006A5C3A /* LaunchScreen.xib */,
@@ -194,6 +193,7 @@
 				F9A938F21C058D5F005C7977 /* AddAnswerViewController.swift */,
 				F9A939291C083569005C7977 /* FriendsViewController.swift */,
 				F9A939311C0D14B8005C7977 /* AddFriendViewController.swift */,
+				F90792801C0E58ED00A642AA /* UserViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

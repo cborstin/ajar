@@ -29,6 +29,9 @@ class AddFriendViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.backgroundColor = UIColor.clearColor()
         tableView.layer.borderWidth = 2.0;
         tableView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
     }
     
     

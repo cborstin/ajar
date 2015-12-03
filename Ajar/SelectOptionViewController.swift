@@ -20,6 +20,9 @@ class SelectOptionViewController: UIViewController, UIPickerViewDelegate, UIPick
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

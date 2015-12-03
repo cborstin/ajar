@@ -23,6 +23,9 @@ class UserViewController: UIViewController {
 
         btnLocation.tag = 0
         btnAge.tag = 1
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let button = sender as? UIButton{
