@@ -15,7 +15,7 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var index: Int!
     var response: [Data] = []
     let responseOne = [
-        Data(fname: "NoteWhite", resp: "I am thankful that Sara took her first unassisted step today. :)", name: "Cat", comment: [("Cat", "tiger", "OMG NO WAY")], img: "tiger"),
+        Data(fname: "NoteWhite", resp: "I am thankful that Sara took her first unassisted step today. :)", name: "Cat", comment: [("Cindy", "dog", "She'll be running around the house and knocking over things before you know it. :)")], img: "tiger"),
         Data(fname: "NoteWhite", resp: "I am grateful for the sun and access to coffee and Brian's first word!", name: "Cindy", comment: [("Cat", "tiger", "OMG NO WAY")], img: "dog"),
         Data(fname: "NoteWhite", resp: "Charlotte made her first friend at preschool!", name: "Karen", comment: [("Cat", "tiger", "OMG NO WAY")], img: "elephant")
     ]
