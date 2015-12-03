@@ -29,11 +29,20 @@ class AddAnswerViewController: UIViewController, UITextViewDelegate {
         postButton.layer.cornerRadius = 5
         postButton.layer.borderWidth = 1
         postButton.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        userText.textColor = UIColor.lightGrayColor()
 
     }
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if userText.textColor == UIColor.lightGrayColor() {
+            textView.text = nil
+            textView.textColor = UIColor.blackColor()
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
