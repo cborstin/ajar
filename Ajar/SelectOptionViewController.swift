@@ -46,8 +46,13 @@ class SelectOptionViewController: UIViewController, UIPickerViewDelegate, UIPick
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return data.count
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
+//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return data[row]
+//    }
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = data[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        return myTitle
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
        selected = data[row]
