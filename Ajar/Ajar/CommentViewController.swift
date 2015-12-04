@@ -17,6 +17,9 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     var icons: [String] = ["tiger", "dog", "elephant"]
     var response:Data!
     var shown:Bool = false
+    var index: Int!
+    @IBOutlet var lblQuestion: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,6 +51,13 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.tableFooterView = footerView
         tableView.tableFooterView!.hidden = true
         tableView.backgroundColor = UIColor.clearColor()
+        
+        if(index == 0){
+            self.lblQuestion.text = "What are you grateful for today?"
+        }
+        else{
+            self.lblQuestion.text = "What memory would you keep from today?"
+        }
     }
     func keyboardWillShow(notification: NSNotification) {
         shown = true

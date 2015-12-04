@@ -105,6 +105,7 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if let commentViewController = segue.destinationViewController as? CommentViewController {
                 if let buttonTag = sender as? UIButton{
                     commentViewController.response = response[buttonTag.tag]
+                    commentViewController.index = index
                 }
                 
             }
