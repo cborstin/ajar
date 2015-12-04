@@ -16,6 +16,7 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
     var users:[String] = ["Cindy", "Cat", "Karen"]
     var icons: [String] = ["tiger", "dog", "elephant"]
     var response:Data!
+    var shown:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,11 +50,17 @@ class CommentViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.backgroundColor = UIColor.clearColor()
     }
     func keyboardWillShow(notification: NSNotification) {
-        self.view.frame.origin.y -= 150
+        shown = true
+        let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        self.view.frame.origin.y -= frame.height
         
     }
     func keyboardWillHide(notification: NSNotification) {
-        self.view.frame.origin.y += 150
+        if(shown){
+            let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+            self.view.frame.origin.y += frame.height
+        }
+        shown = false
         
     }
     func dismissKeyboard() {

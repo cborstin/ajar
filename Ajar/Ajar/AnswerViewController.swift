@@ -15,16 +15,16 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var tableView: UITableView!
     var index: Int!
     var response: [Data] = []
-    let responseOne = [
-        Data(fname: "NoteWhite", resp: "I am thankful that Sara took her first unassisted step today. :)", name: "Cat", comment: [("Cindy", "dog", "She'll be running around the house and knocking over things before you know it!"), ("Karen", "elephant", "Ahh, what a big milestone. Did you get a video?"), ("Cat", "tiger", "Yes! I'll show you next time we get brunch.")], img: "tiger"),
+    var responseOne:[Data] = []
+        /*Data(fname: "NoteWhite", resp: "I am thankful that Sara took her first unassisted step today. :)", name: "Cat", comment: [("Cindy", "dog", "She'll be running around the house and knocking over things before you know it!"), ("Karen", "elephant", "Ahh, what a big milestone. Did you get a video?"), ("Cat", "tiger", "Yes! I'll show you next time we get brunch.")], img: "tiger"),
         Data(fname: "NoteWhite", resp: "I am grateful for the sun and access to coffee and Brian's first word!", name: "Cindy", comment: [("Cat", "tiger", "First words are usually at the end of 6 months, right? Wow, time passes fast."), ("Amy", "cattle", "Shall I drive over just to listen to Brian, I think yes.")], img: "dog"),
         Data(fname: "NoteWhite", resp: "Charlotte made her first friend at preschool!", name: "Karen", comment: [("Cindy", "dog", "Yay for friendship! Btw, we should do playdates soon."), ("Cat", "tiger", "Hey I want in, too!"), ("Cindy", "dog", "Of course, that's a given. ;)")], img: "elephant")
-    ]
-    let responseTwo = [
-        Data(fname: "NoteWhite", resp: "Sara tasted dark chocolate for the first time today. I didn't know her face could pucker up that much.", name: "Cat", comment: [("Cindy", "dog", "HAHAHAH, I'm pretty sure dark chocolate is an acquired taste."), ("Karen", "elephant", "Even I don't like dark chocolate and I'm an adult, please.")], img: "tiger"),
+    ]*/
+    var responseTwo:[Data] = []
+        /*Data(fname: "NoteWhite", resp: "Sara tasted dark chocolate for the first time today. I didn't know her face could pucker up that much.", name: "Cat", comment: [("Cindy", "dog", "HAHAHAH, I'm pretty sure dark chocolate is an acquired taste."), ("Karen", "elephant", "Even I don't like dark chocolate and I'm an adult, please.")], img: "tiger"),
         Data(fname: "NoteWhite", resp: "Brian ran up and down the beach today. So young, so spry.", name: "Cindy", comment: [("Cat", "tiger", "We should really go jogging."), ("Cindy", "dog", "What about the children?"), ("Karen", "elephant", "I mean clearly Brian can run with us, am I right. :)")], img: "dog"),
         Data(fname: "NoteWhite", resp: "Charlotte chased birds at the park and cried because she laughed so hard. :)", name: "Karen", comment: [("Cat", "tiger", "Aww, I love moments like these."), ("Cindy", "dog", "Didn't you used to write poetry in college? You should write one about this."), ("Karen", "elephant", "Shh, Cindy. Shh..")], img: "elephant")
-    ]
+    ]*/
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +61,20 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     override func viewDidAppear(animated: Bool) {
         self.tableView.reloadData()
+        if let parentView = self.parentViewController {
+            if let parentView = parentView as? UINavigationController {
+                if let parentView = parentView.viewControllers[0] as? DailyViewController{
+                    if(self.index == 0){
+                        parentView.responseOne = self.response
+                    }
+                    else{
+                        parentView.responseTwo = self.response
+                    }
+                    
+                }
+            }
+        }
+
     }
     
 
@@ -111,6 +125,7 @@ class AnswerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+        print("HAY")
         if let id = identifier{
             if id == "idAddAnswerUwindSegue" {
                 let unwindSegue = AddAnswerUnwindSegue(identifier: id, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
