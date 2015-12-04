@@ -318,7 +318,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Stuffed" translatesAutoresizingMaskIntoConstraints="NO" id="xdB-l7-2ha" customClass="DailyViewController">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stuffed" translatesAutoresizingMaskIntoConstraints="NO" id="xdB-l7-2ha" customClass="DailyViewController">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
@@ -326,12 +326,12 @@
                                 <rect key="frame" x="281" y="506" width="39" height="37"/>
                                 <animations/>
                             </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEb-2E-ZNn">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEb-2E-ZNn">
                                 <rect key="frame" x="47" y="96" width="507" height="402"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="507" id="Bpx-uI-8U6"/>
-                                    <constraint firstAttribute="height" constant="438" id="eeg-WT-a2l"/>
+                                    <constraint firstAttribute="height" constant="402" id="eeg-WT-a2l"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="OiO-39-qlC" id="CX4-nK-3vk"/>
@@ -346,7 +346,7 @@
                             <constraint firstItem="xdB-l7-2ha" firstAttribute="centerX" secondItem="DEb-2E-ZNn" secondAttribute="centerX" constant="-1" id="1w2-0W-VM8"/>
                             <constraint firstItem="DEb-2E-ZNn" firstAttribute="top" secondItem="PMo-6X-yAY" secondAttribute="bottom" constant="40" id="3p1-4u-Fze"/>
                             <constraint firstItem="P0c-vZ-DkY" firstAttribute="top" secondItem="Wks-eF-gwU" secondAttribute="bottom" constant="8" symbolic="YES" id="8B3-wn-3f2"/>
-                            <constraint firstItem="Wks-eF-gwU" firstAttribute="top" secondItem="DEb-2E-ZNn" secondAttribute="top" constant="440" id="9xg-Xu-MR6"/>
+                            <constraint firstItem="Wks-eF-gwU" firstAttribute="top" secondItem="DEb-2E-ZNn" secondAttribute="top" constant="410" id="9xg-Xu-MR6"/>
                             <constraint firstItem="xdB-l7-2ha" firstAttribute="top" secondItem="Vsr-xh-XsN" secondAttribute="top" id="DDn-xr-MHM"/>
                             <constraint firstItem="Wks-eF-gwU" firstAttribute="centerX" secondItem="DEb-2E-ZNn" secondAttribute="centerX" id="JXF-RD-V89"/>
                             <constraint firstItem="DEb-2E-ZNn" firstAttribute="leading" secondItem="Vsr-xh-XsN" secondAttribute="leadingMargin" constant="27" id="Msa-q3-mIW"/>
@@ -359,7 +359,7 @@
                             <constraint firstItem="Wks-eF-gwU" firstAttribute="centerX" secondItem="xdB-l7-2ha" secondAttribute="centerX" id="ajI-4v-aVE"/>
                             <constraint firstItem="DEb-2E-ZNn" firstAttribute="centerX" secondItem="Wks-eF-gwU" secondAttribute="centerX" id="d5u-nI-Acb"/>
                             <constraint firstItem="xdB-l7-2ha" firstAttribute="leading" secondItem="Vsr-xh-XsN" secondAttribute="leading" id="mmv-Sb-ROg"/>
-                            <constraint firstAttribute="bottom" secondItem="xdB-l7-2ha" secondAttribute="bottom" id="r4T-LC-kAM"/>
+                            <constraint firstAttribute="bottom" secondItem="xdB-l7-2ha" secondAttribute="bottom" constant="-49" id="r4T-LC-kAM"/>
                             <constraint firstItem="DEb-2E-ZNn" firstAttribute="centerX" secondItem="Vsr-xh-XsN" secondAttribute="centerX" id="wHv-KH-7gB"/>
                         </constraints>
                         <variation key="default">
