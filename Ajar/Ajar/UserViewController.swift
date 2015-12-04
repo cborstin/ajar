@@ -27,9 +27,9 @@ class UserViewController: UIViewController {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
-        imgProfBackground.backgroundColor = UIColor.whiteColor()
-        imgProfBackground.layer.borderWidth = 2
-        imgProfBackground.layer.borderColor = UIColor.darkGrayColor().CGColor
+//        imgProfBackground.backgroundColor = UIColor.whiteColor()
+//        imgProfBackground.layer.borderWidth = 2
+//        imgProfBackground.layer.borderColor = UIColor.darkGrayColor().CGColor
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
