@@ -15,14 +15,14 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet var tableView: UITableView!
     
     var potentialFriends = [
-        Friend(img: "sheep", name: "Rachel", locate: "Chicago", age: "4-5"),
-        Friend(img: "giraffe", name: "Nathan", locate: "London", age: "4-5"),
-        Friend(img: "hippopotamus", name: "Griffin", locate: "Sacramento", age: "1-2")
+        Friend(img: "sheep", name: "Rachel", locate: "Chicago", age: "1 child"),
+        Friend(img: "giraffe", name: "Nathan", locate: "London", age: "2 children"),
+        Friend(img: "hippopotamus", name: "Griffin", locate: "Sacramento", age: "1 child")
     ]
     var friends = [
-        Friend(img: "tiger", name: "Cat", locate: "Los Angeles", age: "1-2"),
-        Friend(img: "dog", name: "Cindy", locate: "New York", age: "2-3"),
-        Friend(img: "elephant", name: "Karen", locate: "San Francisco", age: "2-4")    ]
+        Friend(img: "tiger", name: "Cat", locate: "Los Angeles", age: "4 children"),
+        Friend(img: "dog", name: "Cindy", locate: "New York", age: "2 children"),
+        Friend(img: "elephant", name: "Karen", locate: "San Francisco", age: "1 child")    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -27,9 +27,9 @@ class UserViewController: UIViewController {
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.navigationController!.navigationBar.translucent = true
-        imgProfBackground.backgroundColor = UIColor.whiteColor()
-        imgProfBackground.layer.borderWidth = 2
-        imgProfBackground.layer.borderColor = UIColor.darkGrayColor().CGColor
+//        imgProfBackground.backgroundColor = UIColor.whiteColor()
+//        imgProfBackground.layer.borderWidth = 2
+//        imgProfBackground.layer.borderColor = UIColor.darkGrayColor().CGColor
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -40,7 +40,7 @@ class UserViewController: UIViewController {
                     selectOptionViewController.data = ["Palo Alto", "Mountain View", "New York", "Chicago", "London", "Sacramento"]
                 }
                 else{
-                    selectOptionViewController.data = ["1-2", "1-3", "1-4", "1-5"]
+                    selectOptionViewController.data = ["1 child", "2 children", "3 children", "4 children", "5 children", "6 children", "7 children", "8 children", "9 children", "10+ children"]
                 }
             }
         }
